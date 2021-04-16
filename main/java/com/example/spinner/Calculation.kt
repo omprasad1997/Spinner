@@ -13,6 +13,12 @@ const val feetToYard   = 3.0
 const val gallonToLitre = 3.785
 const val gallonToMillilitre = 3785.0
 const val litreToMillilitre = 1000.0
+const val kilogramToGram = 1000.0
+const val kilogramToTon = 1000.0
+const val gramToTon = 907185.0
+const val celsiusToFahrenheitFactor = 0.55
+const val fahrenheitToCelsiusFactor = 1.8
+
 
 class Calculation {
     fun inchToCm(value: Int): Double {
@@ -20,19 +26,19 @@ class Calculation {
     }
 
     fun inchToM(value: Int): Double {
-            return  value * inchToMetre
+            return  value / inchToMetre
     }
 
     fun inchToFeet(value: Int): Double {
-        return value * inchToFeet
+        return value / inchToFeet
     }
 
     fun inchToYard(value: Int): Double {
-        return  value * inchToYard
+        return  value / inchToYard
     }
 
     fun cmToInch(value: Int): Double {
-        return value * inchToCentimetre
+        return value / inchToCentimetre
     }
 
     fun cmToMetre(value: Int): Double {
@@ -88,7 +94,7 @@ class Calculation {
     }
 
     fun yardToM(value: Int): Double {
-        return value * mToYard
+        return value / mToYard
     }
 
     fun yardToFeet(value: Int): Double {
@@ -119,5 +125,36 @@ class Calculation {
         return value / gallonToMillilitre
     }
 
+    fun kilogramToGram(value: Int): Double {
+        return value * kilogramToGram
+    }
 
+    fun kilogramToTon(value: Int): Double {
+        return value / kilogramToTon
+    }
+
+    fun gramToKilogram(value: Int): Double {
+        return value / kilogramToGram
+    }
+
+    fun gramToTon(value: Int): Double {
+        return value / gramToTon
+    }
+
+    fun tonToKilogram(value: Int): Double {
+        return value * kilogramToTon
+    }
+
+    fun tonToGram(value: Int): Double {
+        return value * gramToTon
+    }
+
+    fun celsiusToFahrenheit(value: Int): Double {
+        return ((value * fahrenheitToCelsiusFactor) + 32)
+    }
+
+    fun fahrenheitToCelsius(value: Int): Double {
+        return ((value - 32) * celsiusToFahrenheitFactor)
+
+    }
 }

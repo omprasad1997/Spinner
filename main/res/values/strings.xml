@@ -33,9 +33,8 @@
 
     <string-array name="temperature_parameter">
         <item><b>Select temperature type</b></item>
-        <item>Fahrenheit</item>
-        <item>Celsius</item>
-        <item>ton</item>
+        <item>fahrenheit</item>
+        <item>celsius</item>
     </string-array>
 
 </resources>

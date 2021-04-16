@@ -84,6 +84,22 @@ class MainActivity : AppCompatActivity() {
                     result = calculation.millilitreToLitre(Integer.parseInt(enteredNumber.text.toString()))
                 }else if(fromUnit == "millilitre" && toUnit == "gallon"){
                     result = calculation.millilitreToGallon(Integer.parseInt(enteredNumber.text.toString()))
+                }else if(fromUnit == "kg" && toUnit == "g"){
+                    result = calculation.kilogramToGram(Integer.parseInt(enteredNumber.text.toString()))
+                }else if(fromUnit == "kg" && toUnit == "ton"){
+                    result = calculation.kilogramToTon(Integer.parseInt(enteredNumber.text.toString()))
+                }else if(fromUnit == "g" && toUnit == "kg"){
+                    result = calculation.gramToKilogram(Integer.parseInt(enteredNumber.text.toString()))
+                }else if(fromUnit == "g" && toUnit == "ton"){
+                    result = calculation.gramToTon(Integer.parseInt(enteredNumber.text.toString()))
+                }else if(fromUnit == "ton" && toUnit == "kg"){
+                    result = calculation.tonToKilogram(Integer.parseInt(enteredNumber.text.toString()))
+                }else if(fromUnit == "ton" && toUnit == "g"){
+                    result = calculation.tonToGram(Integer.parseInt(enteredNumber.text.toString()))
+                }else if(fromUnit == "celsius" && toUnit == "fahrenheit"){
+                    result = calculation.celsiusToFahrenheit(Integer.parseInt(enteredNumber.text.toString()))
+                }else if(fromUnit == "fahrenheit" && toUnit == "celsius"){
+                    result = calculation.fahrenheitToCelsius(Integer.parseInt(enteredNumber.text.toString()))
                 }
                 resultText.text = "$result"
             }
